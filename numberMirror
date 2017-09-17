@@ -1,0 +1,10 @@
+#https://www.codechef.com/problems/START01
+
+#test code
+
+def numberMirror():
+    
+    inputVar = int(input())
+    print(inputVar)
+    
+numberMirror()
