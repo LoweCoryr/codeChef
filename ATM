@@ -1,0 +1,37 @@
+#https://www.codechef.com/problems/HS08TEST
+
+#sudo code
+    #details
+    	#withdrawl/5 mod 0
+    	#withdrawal + fee <= innitialBalance
+    	#fee = $.5
+    
+    #input
+    	#0 <= withdrawal (integer) <= 2000
+    	#0 <= innitialBalance (2 decimals) <=2000 
+    #output
+    	#if 
+    		#withdrawal + fee <= innitialBalance and
+    		#withdrawal/5 mod 0
+    	#then 
+    		#return newBalance
+    	#else
+    		#return innitialBalance
+            
+#test code
+
+def atm():
+    
+    import sys
+    
+    inputVar = sys.stdin.readline().rstrip()
+    withdrawal, innitialBalance = inputVar.split(' ')
+    
+    withdrawal = float(withdrawal)
+    innitialBalance = float(innitialBalance)
+    
+    if withdrawal + .5 <= innitialBalance and withdrawal % 5 == 0:
+        print(innitialBalance - withdrawal - .5)
+    else:
+        print(innitialBalance)
+atm()
